@@ -17,8 +17,11 @@ This tool gives that metadata a simple GUI, mainly for people who want to work w
 ## Features
 
 - Open and parse `screenshots.vdf`
+- Auto-detect the active `screenshots.vdf` path
 - Browse screenshots by AppID / game
+- Choose a startup view for the list
 - Preview the selected screenshot
+- Filter entries with `Published only` & `Unpublished only`
 - Show raw VDF states such as `Published`, `imported=1`, or `no import flag`
 - Edit metadata fields directly in the VDF
 - Create manual backups when needed
@@ -26,19 +29,21 @@ This tool gives that metadata a simple GUI, mainly for people who want to work w
 
 ## Notes
 
+- Install Pillow (Python Imaging Library) if you want the built-in screenshot preview to work. Without it, the tool can still read and edit metadata, but image preview is disabled.
 - `imported=1` is shown as a raw VDF state and should not automatically be read as "externally added"
 - `Published` is treated separately when a screenshot has a published file id
-- Pillow (`PIL`) is required for image preview support
+  
 
 ## Usage
 
 1. Start the script with Python.
-2. Load your `screenshots.vdf` file.
+2. Use Auto-detect or load a `screenshots.vdf` file manually.
 3. Select an AppID
-4. Select a screenshot entry.
-5. Edit the metadata field.
-6. Click **Apply** to save the change.
-7. Use **Backup** only when you want a manual safety copy.
+5. Optionally change the startup view or use the published filters.
+6. Select a screenshot entry.
+7. Edit the metadata field.
+8. Click **Apply** to save the change.
+9. Use **Backup** only when you want a manual safety copy.
 
 ## Status
 
@@ -46,6 +51,6 @@ This project is still in alpha. More metadata fields may be added (maybe) later,
 
 ## Transparency
 
-AI was used as a development aid for parts of the coding, UI iteration, wording, and troubleshooting.
+AI was used as a development aid for parts of the coding, UI iteration, wording, aaand troubleshooting.
 
 Direction, testing, and project goals were still set by me.
