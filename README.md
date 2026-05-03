@@ -6,6 +6,9 @@ This started as a niche weekend project to make it easier to add or restore meta
 
 ## Why it exists
 
+First and foremost:
+Especially wanted to test before Half-Life 3 drops how well you can get by in 2026 just by chatting with these 'smart and badass AIs'... I'm really curious (Spoilers, It was a very strange experience)
+
 Steam's screenshot system supports extra metadata such as location names, tagged users, and tagged workshop files. Valve documents this here:
 
 - [ISteamScreenshots Interface](https://partner.steamgames.com/doc/api/isteamscreenshots)
@@ -51,6 +54,8 @@ This project is still in alpha. More metadata fields may be added (maybe) later,
 
 ## Transparency
 
-AI was used as a development aid for parts of the coding, UI iteration, wording, aaand troubleshooting.
-
+AI was used as a development aid for parts of the coding, UI iteration, wording, and troubleshooting.  
 Direction, testing, and project goals were still set by me.
+
+No enterprise-grade setup here – just regular language models like ChatGPT, Perplexity or Copilot.  
+Worked in a single chat window with interruptions, copy-paste style.
