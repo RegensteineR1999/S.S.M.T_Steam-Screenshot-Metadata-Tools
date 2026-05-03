@@ -1,62 +1,41 @@
-# Steam Screenshot Metadata Tool
+# SSMT (Steam Screenshot Metadata Tool) - Weekend AI Experiment
 
-A small tool for viewing and editing Steam screenshot metadata in `screenshots.vdf`
-
-This started as a niche weekend project to make it easier to add or restore metadata for non-Steam or external screenshots inside Steam's screenshot library.
-
-## Why it exists
-
-**First and foremost:
-Especially wanted to test before Half-Life 3 drops how well you can get by in 2026 just by chatting with these 'smart and badass AIs'... I'm really curious (Spoilers, It was a very strange experience)**
-
-Steam's screenshot system supports extra metadata such as location names, tagged users, and tagged workshop files. Valve documents this here:
-
-- [ISteamScreenshots Interface](https://partner.steamgames.com/doc/api/isteamscreenshots)
-- [Steam Screenshots API](https://partner.steamgames.com/doc/features/screenshots)
+![Tool Screenshot](path/to/your/gui-screenshot.png)  
 
 
-This tool gives that metadata a simple GUI, mainly for people who want to work with Images/Screenshots outside the usual Steam workflow.
+Quick Python/Tkinter tool (~1000 lines) to edit Steam's `screenshots.vdf`: Add locations/tags ~~for Workshop uploads~~, preview images, per-AppID filter. Started with Arknights: Endfield screenshots (added as Non-Steam game). Pure weekend hack to test AI coding assistants.
 
 ## Features
+- Load/edit multiple Steam users' VDF files
+- Per-AppID dropdown + "Open game folder" button
+- Metadata editor: Location, ~~Steamusertags, Workshop prep~~
+- Image preview, status colors (Local/Imported/Published)
+- Timestamped backups, safety warnings ("Close Steam first!")
+- ~~Sort by Created/Location~~ (falls back to Steam order)
 
-- Open and parse `screenshots.vdf`
-- Auto-detect the active `screenshots.vdf` path
-- Browse screenshots by AppID / game
-~~- Choose a startup view for the list~~
-- Preview the selected screenshot
-- Filter entries with `Published only` & `Unpublished only`
-- Show raw VDF states such as `Published`, `imported=1`, or `no import flag`
-- Edit metadata fields directly in the VDF
-- Create manual backups when needed
-- Reveal the selected file in Explorer
+## Quickstart
+1. Close Steam completely (avoids VDF files corruption).
+2. Run `python stamp_v1.0-alpha.py` ~~(or EXE)~~.
+3. Pick user/AppID → Load entries → Edit → Apply.
 
-## Notes
+**Requirements**: Python 3.12+, Pillow (for previews: `pip install pillow`).
 
-- Install Pillow (Python Imaging Library) if you want the built-in screenshot preview to work. Without it, the tool can still read and edit metadata, but image preview is disabled.
-- `imported=1` is shown as a raw VDF state and should not automatically be read as "externally added"
-  
-~~- `Published` is treated separately when a screenshot has a published file id~~
-  
+## Changelog
+See [CHANGELOG.md](CHANGELOG.md) for full Alpha 1–20 history.
 
-## Usage
+## Lessons Learned: AI Coding Fail
 
-1. Start the script with Python.
-2. Use Auto-detect or load a `screenshots.vdf` file manually.
-3. Select an AppID
-5. Optionally change the startup view or use the published filters.
-6. Select a screenshot entry.
-7. Edit the metadata field.
-8. Click **Apply** to save the change.
-9. Use **Backup** only when you want a manual safety copy.
+In Alpha 18/19, a leftover debug snippet haunted the score_vdf_candidate() function: if 'Endfield' in text: score += 25. This came from  first tests with non Steam games like Arknights: Endfield for AppID 431960,. I asked 4-5 times to remove it – each time got "I've changed it," but nothing happened. Code stayed identical. Only switching to Claude model finally killed it, though by then everything was reset like in "final2build"See:https://github.com/RegensteineR1999/Steam-Screenshot-Metadata-Tool/releases/tag/v.0.9.20xxx.
 
-## Status
+Leftovers and Debug Junk
+The code was littered with self-made debug crap: High scores for "Endfield" strings, unused prints, indentation errors in replaces, and old stress-test leftovers. Simple tasks like "German to English" for UI text (e.g., "without creating a backup" to "Location metadata apply") failed hard – translations missing or breaking sorting. Plus straight-up lies like "Endfield is gone now" when it was still there.
 
-This project is still in alpha. ~~More metadata fields may be added (maybe) later, including workshop-related fields and tagged Steam users.~~
+Why So Catastrophic?
+AI models hallucinate on code: They claim changes happened ("replace() worked"), but don't actually check indentation matches or if the file is clean. At 1000 lines small? Remarkable – shows how probabilistic these things are, especially with booleans or file edits.
 
-## Transparency
 
-AI was used as a development aid for parts of the coding, UI iteration, wording, and troubleshooting.  
-Direction, testing, and project goals were still set by me.
 
-No enterprise-grade setup here – just regular language models like ChatGPT, Perplexity or Copilot.  
-Worked in a single chat window with interruptions, copy-paste style.
+## License
+CC0 (public domain).
+
+**Archived weekend project. No further updates planned. Fork/star if useful!**
