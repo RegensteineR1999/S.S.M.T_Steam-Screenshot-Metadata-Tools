@@ -1,6 +1,7 @@
 # SSMT (Steam Screenshot Metadata Tool) - Weekend AI Experiment
 
-![Tool Screenshot](path/to/your/gui-screenshot.png)  
+![Mein Screenshot](Screenshot%202026-05-02%20034317.png)
+
 
 
 Quick Python/Tkinter tool (~1000 lines) to edit Steam's `screenshots.vdf`: Add locations/tags ~~for Workshop uploads~~, preview images, per-AppID filter. Started with Arknights: Endfield screenshots (added as Non-Steam game). Pure weekend hack to test AI coding assistants.
@@ -38,4 +39,4 @@ AI models hallucinate on code: They claim changes happened ("replace() worked"),
 ## License
 CC0 (public domain).
 
-**Archived weekend project. No further updates planned. Fork/star if useful!**
+**Archived weekend project. No further updates planned.**
