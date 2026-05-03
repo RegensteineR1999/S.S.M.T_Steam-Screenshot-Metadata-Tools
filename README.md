@@ -16,7 +16,7 @@ Quick Python/Tkinter tool (~1000 lines) to edit Steam's `screenshots.vdf`: Add l
 
 ## Quickstart
 1. Close Steam completely (avoids VDF files corruption).
-2. Run `python stamp_v1.0-alpha.py` ~~(or EXE)~~.
+2. Run `python main_alpha14.py` ~~(or EXE)~~.
 3. Pick user/AppID → Load entries → Edit → Apply.
 
 **Requirements**: Python 3.12+, Pillow (for previews: `pip install pillow`).
