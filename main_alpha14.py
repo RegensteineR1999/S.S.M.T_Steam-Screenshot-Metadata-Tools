@@ -631,7 +631,7 @@ class App(tk.Tk):
         self.save_current(make_backup=False)
 
     def wip_feature(self):
-        messagebox.showinfo('Work in progress', 'This metadata field is planned for a later alpha build.')
+        messagebox.showinfo('Work in progress', 'This metadata field is planned for a later alpha build!')
 
     def auto_find_vdf(self):
         candidates = find_screenshots_vdf_candidates()
