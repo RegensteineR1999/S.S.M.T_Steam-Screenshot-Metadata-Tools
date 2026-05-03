@@ -34,6 +34,7 @@ This tool gives that metadata a simple GUI, mainly for people who want to work w
 
 - Install Pillow (Python Imaging Library) if you want the built-in screenshot preview to work. Without it, the tool can still read and edit metadata, but image preview is disabled.
 - `imported=1` is shown as a raw VDF state and should not automatically be read as "externally added"
+  
 ~~- `Published` is treated separately when a screenshot has a published file id~~
   
 
