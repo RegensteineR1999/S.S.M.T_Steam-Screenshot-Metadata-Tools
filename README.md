@@ -6,8 +6,8 @@ This started as a niche weekend project to make it easier to add or restore meta
 
 ## Why it exists
 
-First and foremost:
-Especially wanted to test before Half-Life 3 drops how well you can get by in 2026 just by chatting with these 'smart and badass AIs'... I'm really curious (Spoilers, It was a very strange experience)
+**First and foremost:
+Especially wanted to test before Half-Life 3 drops how well you can get by in 2026 just by chatting with these 'smart and badass AIs'... I'm really curious (Spoilers, It was a very strange experience)**
 
 Steam's screenshot system supports extra metadata such as location names, tagged users, and tagged workshop files. Valve documents this here:
 
