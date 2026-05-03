@@ -1,6 +1,6 @@
 # Steam Screenshot Metadata Tool
 
-A small tool for viewing and editing Steam screenshot metadata in `screenshots.vdf`.
+A small tool for viewing and editing Steam screenshot metadata in `screenshots.vdf`
 
 This started as a niche weekend project to make it easier to add or restore metadata for non-Steam or external screenshots inside Steam's screenshot library.
 
