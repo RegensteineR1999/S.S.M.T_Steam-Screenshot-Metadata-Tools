@@ -22,7 +22,7 @@ This tool gives that metadata a simple GUI, mainly for people who want to work w
 - Open and parse `screenshots.vdf`
 - Auto-detect the active `screenshots.vdf` path
 - Browse screenshots by AppID / game
-- Choose a startup view for the list
+~~- Choose a startup view for the list~~
 - Preview the selected screenshot
 - Filter entries with `Published only` & `Unpublished only`
 - Show raw VDF states such as `Published`, `imported=1`, or `no import flag`
@@ -50,7 +50,7 @@ This tool gives that metadata a simple GUI, mainly for people who want to work w
 
 ## Status
 
-This project is still in alpha. More metadata fields may be added (maybe) later, including workshop-related fields and tagged Steam users.
+This project is still in alpha. ~~More metadata fields may be added (maybe) later, including workshop-related fields and tagged Steam users.~~
 
 ## Transparency
 
